@@ -1,0 +1,16 @@
+{
+	"name": "SNF_CUST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "LATEARRIVAL",
+			"table": "DIM_CUSTOMER"
+		}
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"name": "SnowflakeTableBREEDDIM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "BREED_SK",
+				"type": "NUMBER",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "START_DATE",
+				"type": "DATE"
+			},
+			{
+				"name": "END_DATE",
+				"type": "DATE"
+			},
+			{
+				"name": "IS_CURRENT",
+				"type": "NUMBER",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BREED_DK",
+				"type": "NUMBER",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SPECIES_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "PRIMARY_BREED_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "SECONDARY_BREED_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "DI_JOB_ID",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "DI_LOAD_DATE",
+				"type": "DATE"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGE",
+			"table": "BREED_DIM"
+		}
+	}
+}

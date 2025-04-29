@@ -1,0 +1,56 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "data",
+						"type": "DatasetReference"
+					},
+					"name": "readCSV"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          ARREST_KEY as string,",
+				"          ARREST_DATE as string,",
+				"          PD_CD as string,",
+				"          PD_DESC as string,",
+				"          KY_CD as string,",
+				"          OFNS_DESC as string,",
+				"          LAW_CODE as string,",
+				"          LAW_CAT_CD as string,",
+				"          ARREST_BORO as string,",
+				"          ARREST_PRECINCT as string,",
+				"          JURISDICTION_CODE as string,",
+				"          AGE_GROUP as string,",
+				"          PERP_SEX as string,",
+				"          PERP_RACE as string,",
+				"          X_COORD_CD as string,",
+				"          Y_COORD_CD as string,",
+				"          Latitude as string,",
+				"          Longitude as string,",
+				"          {New Georeferenced Column} as string,",
+				"          DateTime_Out as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     limit: 100,",
+				"     ignoreNoFilesFound: false) ~> readCSV",
+				"readCSV derive(PD_DESC = iifNull(PD_DESC, 'UNKNOWN') ,",
+				"          KY_CD = iifNull(toString([KY_CD]), 'UNKNOWN'),",
+				"          LAW_CODE = iifNull(LAW_CODE, 'UNKNOWN') ,",
+				"          PD_CD = iifNull(PD_CD, 'UNKNOWN') ,",
+				"          OFNS_DESC = iifNull(OFNS_DESC, 'UNKNOWN') ) ~> derivedColumn1"
+			]
+		}
+	}
+}

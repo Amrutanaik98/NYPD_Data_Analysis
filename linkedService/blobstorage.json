@@ -1,0 +1,11 @@
+{
+	"name": "blobstorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"sasUri": "https://blobstorageamr.blob.core.windows.net/?sv=2022-11-02&ss=bfqt&srt=c&sp=rwdlacupiytfx&se=2025-04-06T16:47:42Z&st=2025-02-06T09:47:42Z&spr=https&sig=12vtJQR5sqJMyA6lRV84cFEJ2Wc2yUCU277AU6GXsdI%3D?sv=2022-11-02&ss=bfqt&srt=c&sp=rwdlacupiytfx&se=2025-04-06T16:47:42Z&st=2025-02-06T09:47:42Z&spr=https&sig=12vtJQR5sqJMyA6lRV84cFEJ2Wc2yUCU277AU6GXsdI%3D"
+		}
+	}
+}

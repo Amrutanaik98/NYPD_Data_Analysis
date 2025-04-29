@@ -1,0 +1,81 @@
+{
+	"name": "Datedim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "DATE_SK",
+				"type": "NUMBER",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DAY_ABBR",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "MONTH_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "MONTH_ABBR",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "MONTH_NUM",
+				"type": "NUMBER",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "QTR_NUM",
+				"type": "NUMBER",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "DT",
+				"type": "DATE"
+			},
+			{
+				"name": "DAY_NUM",
+				"type": "NUMBER",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "DAY_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "YEAR_NUM",
+				"type": "NUMBER",
+				"precision": 4,
+				"scale": 0
+			},
+			{
+				"name": "IS_WEEKEND",
+				"type": "NUMBER",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "DI_JOB_ID",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "DI_LOAD_DATE",
+				"type": "DATE"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGE",
+			"table": "DATE_DIM"
+		}
+	}
+}

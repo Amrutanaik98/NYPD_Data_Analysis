@@ -1,0 +1,16 @@
+{
+	"name": "snf_fact_late",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "LATEARRIVAL",
+			"table": "FCT_INVOICE"
+		}
+	}
+}

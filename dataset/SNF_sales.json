@@ -1,0 +1,65 @@
+{
+	"name": "SNF_sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "INVOICEID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CUSTOMERID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "INVOICEDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "SHIPTO",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "SHIPTO_CITY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "SHIPTO_COUNTRY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "SALESPERSONPERSONID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "SALESPERSONNAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TOTAL_PRODUCT_CNT",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "TOTAL",
+				"type": "FLOAT"
+			}
+		],
+		"typeProperties": {
+			"schema": "LATEARRIVAL",
+			"table": "STAGE_SALES_DATA"
+		}
+	}
+}

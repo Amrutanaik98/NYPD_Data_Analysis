@@ -1,0 +1,112 @@
+{
+	"name": "DelimitedText_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "nypdprofilleddata.csv",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Field Category",
+				"type": "String"
+			},
+			{
+				"name": "Min",
+				"type": "String"
+			},
+			{
+				"name": "Max",
+				"type": "String"
+			},
+			{
+				"name": "Median",
+				"type": "String"
+			},
+			{
+				"name": "Std. Dev.",
+				"type": "String"
+			},
+			{
+				"name": "Percent Missing",
+				"type": "String"
+			},
+			{
+				"name": "Unique Values",
+				"type": "String"
+			},
+			{
+				"name": "Mean",
+				"type": "String"
+			},
+			{
+				"name": "Layout",
+				"type": "String"
+			},
+			{
+				"name": "Remarks",
+				"type": "String"
+			},
+			{
+				"name": "Shortest_Value",
+				"type": "String"
+			},
+			{
+				"name": "Longest_Value",
+				"type": "String"
+			},
+			{
+				"name": "MinValueCount",
+				"type": "String"
+			},
+			{
+				"name": "MaxValueCount",
+				"type": "String"
+			},
+			{
+				"name": "Latest Date",
+				"type": "String"
+			},
+			{
+				"name": "Earliest Date",
+				"type": "String"
+			},
+			{
+				"name": "Interval",
+				"type": "String"
+			},
+			{
+				"name": "ObjType",
+				"type": "String"
+			},
+			{
+				"name": "Avg_AreaSqMi",
+				"type": "String"
+			},
+			{
+				"name": "Avg_LengthMi",
+				"type": "String"
+			},
+			{
+				"name": "Avg_NumPoints",
+				"type": "String"
+			}
+		]
+	}
+}
